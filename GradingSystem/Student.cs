@@ -1,9 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace GradingSystem
 {
     class Student
@@ -11,19 +5,22 @@ namespace GradingSystem
         public string Name;
         public decimal[] Marks = new decimal[5];
         static decimal AverageMarks;
-
+        // to calculate average
         public decimal CalculateAverageMarks() {
             AverageMarks = Marks.Average();
             return AverageMarks; 
         }
+        // to find minimum marks from array
         public decimal MinMarks()
         {
             return Marks.Min();
         }
+        // to find maximum marks from array
         public decimal MaxMarks()
         {
             return Marks.Max();
         }
+        // to calculate grade from marks(argument - average)
         public string CalculateGrade(decimal marks)
         {
             int marksInt = (int)marks;
